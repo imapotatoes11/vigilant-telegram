@@ -65,6 +65,8 @@ a {
 
 .main-nav a:hover {
 	color: #7d9ec1;
+    transform:scale(110%);
+    transform:translateY(2.5px);
 }
 
 
@@ -73,7 +75,7 @@ a {
 	padding-top: .5em;
 	padding-bottom: .5em;
 	border: 1px solid #212121;
-	background-color: #4b4b4b;
+	background-color: rgb(30,30,50);/*#4b4b4b;*/
 	-webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
 	-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
 	box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
@@ -222,6 +224,29 @@ a {
 }
 
 
+.content4{
+    background:rgb(30,30,50);
+
+    padding-left:1em;
+    padding-right:1em;
+
+    margin-top:1em;
+    
+    border-radius:0.25em;
+    border:5px solid rgb(40,40,60);
+}
+
+
+
+
+
+.footer{
+    background-color:rgb(30,30,50);
+    margin-top:25px;
+    padding:1em;
+    text-align:center;
+}
+
 
 
 
@@ -290,11 +315,11 @@ a {
 
         <div class="content">
             <!--add your stuff here-->
-            <h2 class="content1">Welcome to my homepage!</h2>
+            <h2 class="content1">MMMMMMMMM</h2>
             
             <div style="display:flex; margin:0 -5px;">
                 <div class="content3">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p>Lorem ipsum dolor sit amet. Qui dolorem quia et harum soluta ea reiciendis dolorem.</p>
                     <div class="content3_button" style="text-align:center; width:7.5em; font-size:12.5px; color:rgb(60,60,80); margin:auto; margin-bottom:1em; margin-top:1em;">
                         <a href="https://imapotatoes11.github.io/vigilant-telegram">Click Me!</a>
                     </div>
@@ -310,14 +335,50 @@ a {
                     <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
                 </div>
                 <div class="content3">
-                    <p id="typeout">Vel commodi perspiciatis hic voluptatem ducimus sit magnam illum non blanditiis temporibus est ratione voluptas 33 doloribus nulla!</p>
-                    <script src="/script.js"></script>
+                    <!--<p id="typeout">Vel commodi perspiciatis hic voluptatem ducimus sit magnam illum non blanditiis temporibus est ratione voluptas 33 doloribus nulla!</p>
+                    <script src="/script.js"></script>-->
+                    <h4>Future Projects:</h4>
+                    <ol>
+                        <li>a</li>
+                        <li>b</li>
+                        <li>c</li>
+                        <li>d</li>
+                    </ol>
                 </div>
+            </div>
+
+            <div class="content4">
+                <h3>TODO <em style="color:white; font-weight:bold;">(TEMP DELETE THIS IN PRODUCTION)</em></h3>
+                <ol>
+                    <li>make about page</li>
+                    <li>make footer buttons actually work</li>
+                    <li>Add more color (too much blue rn)</li>
+                    <li>Replace sample text with actual (meaningful) text</li>
+                </ol>
             </div>
 
 
 
 
+        </div>
+
+        <div class="footer">
+            <h4>This Webpage was made by <a href="https://github.com/imapotatoes11">Kevin</a></h4>
+            <style>
+            .flex_a{
+                margin:0 5px;
+                text-align:center;
+            }
+            .flex{
+                justify-content: center;
+            }
+            </style>
+            <div style="display:flex; margin:0 -5px;" class="flex">
+                <a href="#" class="flex_a">Home</a>
+                <a href="#" class="flex_a">About</a>
+                <a href="#" class="flex_a">Contact</a>
+                <a href="#" class="flex_a">Back To Top</a>
+            </div>
         </div>
     
     </body>
