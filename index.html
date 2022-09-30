@@ -100,7 +100,7 @@ a {
 		align-items: center;
 		/*width: 80%;*/
 		margin: 0 auto;
-		max-width: 1250px;/*1150px;*/
+		max-width: 100%;/*1250px;/*1150px;*/
 	
 	}
 
@@ -119,15 +119,17 @@ a {
 /**********************   aight my code from now on*/
 .content{
     color:rgba(200, 200, 200, 0.75) !important;
+    padding-left:1em;
+    padding-right:1em;
 }
 
-.test{
+.content1{
     text-align:center;
     padding-top:2em;
     padding-bottom:2em;
     
-    background:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://i.pinimg.com/originals/05/fc/64/05fc64de027859a9fb90bc9b270810a9.jpg);
-    background-size:1250px;
+    /*background:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://i.pinimg.com/originals/05/fc/64/05fc64de027859a9fb90bc9b270810a9.jpg);
+    background-size:1250px;*/
     background-repeat:no-repeat;
     background-color:rgba(0,0,0,0.75) !important;
     
@@ -140,8 +142,40 @@ a {
 
     background: linear-gradient(-45deg, #ee76527e, #e73c7e79, #23a5d577, #23d5ab75);
     background-size: 400% 400%;
-    animation: gradient 10s ease infinite;
+    animation: gradient 30s linear infinite;
+
+
+    border-radius:0.25em;
+    
 }
+
+
+.content3{
+    background:rgb(30,30,50);
+
+    padding-left:1em;
+    padding-right:1em;
+
+    width:50%;
+    margin:0 5px;
+    
+    border-radius:0.25em;
+    border:5px solid rgb(40,40,60);
+}
+.content3_button{
+    background:rgb(60,60,100);
+
+    padding:0.5em;
+    color:rgba(255,255,255,0.75);
+
+    border-radius:0.25em;
+    border:1px solid black;
+
+    margin:0.5em;
+    
+
+}
+
 
 @keyframes op {
     from {
@@ -181,7 +215,23 @@ a {
 
         <div class="content">
             <!--add your stuff here-->
-            <h2 class="test">Welcome to my homepage!</h2>
+            <h2 class="content1">Welcome to my homepage!</h2>
+            
+            <div style="display:flex; margin:0 -5px;">
+                <div class="content3">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <div class="content3_button" style="text-align:center; width:7.5em; font-size:12.5px; color:rgb(60,60,80); margin:auto; margin-bottom:1em;">
+                        <a href="https://imapotatoes11.github.io/vigilant-telegram">Click Me!</a>
+                    </div>
+                </div>
+                <div class="content3">
+                    <p>Et beatae atque qui itaque sint non molestiae consequatur aut laboriosam dicta ut ducimus labore et sint laborum. </p>
+                </div>
+                <div class="content3">
+                    <p>Vel commodi perspiciatis hic voluptatem ducimus sit magnam illum non blanditiis temporibus est ratione voluptas 33 doloribus nulla!</p>
+                </div>
+            </div>
+
         </div>
     
     </body>
