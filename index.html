@@ -173,7 +173,28 @@ a {
 
     margin:0.5em;
     
+    transition:0.1s ease-out;
+}
+.content3_button:hover{
+    transform:scale(105%);
+}
 
+.content3_button:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);/*0*/
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.content3_button:hover:after{
+    transform:scale(1);
+    transform-origin: bottom left;
 }
 
 
@@ -201,6 +222,9 @@ a {
 }
 
         </style>
+
+        
+
     </head>
     <body>
         <header class="header">
@@ -220,12 +244,19 @@ a {
             <div style="display:flex; margin:0 -5px;">
                 <div class="content3">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <div class="content3_button" style="text-align:center; width:7.5em; font-size:12.5px; color:rgb(60,60,80); margin:auto; margin-bottom:1em;">
+                    <div class="content3_button" style="text-align:center; width:7.5em; font-size:12.5px; color:rgb(60,60,80); margin:auto; margin-bottom:1em; margin-top:1em;">
                         <a href="https://imapotatoes11.github.io/vigilant-telegram">Click Me!</a>
                     </div>
                 </div>
                 <div class="content3">
                     <p>Et beatae atque qui itaque sint non molestiae consequatur aut laboriosam dicta ut ducimus labore et sint laborum. </p>
+                    <!--
+                    used for github cards: https://lab.lepture.com/github-cards 
+                    IMPORTANT: Must put script tag next to the div for it to work
+                    -->
+                    <div class="github-card" data-github="imapotatoes11" data-width="400" data-height="150" data-theme="default"
+                    style=""></div>
+                    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
                 </div>
                 <div class="content3">
                     <p>Vel commodi perspiciatis hic voluptatem ducimus sit magnam illum non blanditiis temporibus est ratione voluptas 33 doloribus nulla!</p>
