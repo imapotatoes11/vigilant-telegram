@@ -121,6 +121,51 @@ a {
     color:rgba(200, 200, 200, 0.75) !important;
 }
 
+.test{
+    text-align:center;
+    padding-top:2em;
+    padding-bottom:2em;
+    
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://i.pinimg.com/originals/05/fc/64/05fc64de027859a9fb90bc9b270810a9.jpg);
+    background-size:1250px;
+    background-repeat:no-repeat;
+    background-color:rgba(0,0,0,0.75) !important;
+    
+    color:rgba(255, 255, 255, 0.8);
+    font-size:40px;
+    
+    animation: forwards op 3s;
+    animation-timing-function: ease-in-out;
+
+
+    background: linear-gradient(-45deg, #ee76527e, #e73c7e79, #23a5d577, #23d5ab75);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+}
+
+@keyframes op {
+    from {
+        color:rgba(255, 255, 255, 0.05);
+    }
+    to {
+        color:rgba(255, 255, 255, 0.8);
+    }
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+        color:rgba(255,255,255,0.7);
+    }
+    50% {
+        background-position: 100% 50%;
+        color:rgba(255,255,255,0.99)
+    }
+    100% {
+        background-position: 0% 50%;
+        color:rgba(255,255,255,0.7)
+    }
+}
+
         </style>
     </head>
     <body>
@@ -136,6 +181,7 @@ a {
 
         <div class="content">
             <!--add your stuff here-->
+            <h2 class="test">Welcome to my homepage!</h2>
         </div>
     
     </body>
