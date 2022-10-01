@@ -307,10 +307,12 @@ a {
             
             <div style="display:flex; margin:0 -5px;">
                 <div class="content3">
-                    <p>Lorem ipsum dolor sit amet. Qui dolorem quia et harum soluta ea reiciendis dolorem.</p>
-                    <div class="content3_button" style="text-align:center; width:7.5em; font-size:12.5px; color:rgb(60,60,80); margin:auto; margin-bottom:1em; margin-top:1em;">
-                        <a href="https://imapotatoes11.github.io/vigilant-telegram">Click Me!</a>
-                    </div>
+                    <p id="typeout1">Lorem ipsum dolor sit amet. Qui dolorem quia et harum soluta ea reiciendis dolorem.</p>
+                    <a href="https://imapotatoes11.github.io/vigilant-telegram">
+                        <div class="content3_button" style="text-align:center; width:7.5em; font-size:12.5px; color:rgba(255,255,255,0.75); margin:auto; margin-bottom:1em; margin-top:1em;">
+                            Click Me!
+                        </div>
+                    </a>
                 </div>
                 <div class="content3">
                     <p>Et beatae atque qui itaque sint non molestiae consequatur aut laboriosam dicta ut ducimus labore et sint laborum. </p>
@@ -356,16 +358,21 @@ a {
             .flex_a{
                 margin:0 5px;
                 text-align:center;
+                border:none;
+                background:none;
+                color: #9dc5f0;
+                font-size:16px;
             }
             .flex{
                 justify-content: center;
             }
             </style>
             <div style="display:flex; margin:0 -5px;" class="flex">
+                <script type="text/javascript" src="/script.js">window.scrollTop=scrollTop</script>
                 <a href="#" class="flex_a">Home</a>
                 <a href="#" class="flex_a">About</a>
                 <a href="#" class="flex_a">Contact</a>
-                <a href="#" class="flex_a">Back To Top</a>
+                <button onclick="window.scrollTop()" class="flex_a">Back to Top</button>
             </div>
         </div>
     
