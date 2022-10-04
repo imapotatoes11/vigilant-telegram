@@ -348,13 +348,149 @@ a {
 
         <div class="content">
             <!--add your stuff here-->
-            <h2 class="content1">Template</h2>
+            <h2 class="content1">HTML Demo</h2>
 
             <div class="content3" style="width:100% !important; margin:auto;">
-                <h2>Example</h2>
-                <p style="background-color:rgb(40,40,40) !important; text-align: center; display:flex; margin:1em -5px; border-radius:0.5em; justify-content:center;">
-                    This is a template page (I use to make the different pages consitent)
+                <h2>About</h2>
+                <p style="background-color:rgb(40,40,40) !important; text-align: center; display:flex; margin:1em -5px; border-radius:0.5em; justify-content:center; padding:1em;">
+                    I use this page to test and experiment with all of the HTML tags
                 </p>
+            </div>
+
+
+            <div class="content3" style="width:100% !important; margin:auto;">
+                <h2>Lists</h2>
+                <p style="background-color:rgb(40,40,40) !important; text-align: center; display:flex; margin:1em -5px; border-radius:0.5em; justify-content:center; padding:1em;">
+                    HTML Lists can be in the form of an unordered list (ul), and an ordered list (ol)
+                </p>
+                <div style="background-color:rgb(40,40,40) !important; text-align: left !important; display:block; margin:1em -5px; border-radius:0.5em; justify-content:center; padding:1em;">
+                    <p style="text-align: left !important; display:block;">
+                        This is a unordered list (ul)
+                    </p>
+                    <ul style="list-style:circle; margin-left:1em; padding:0;">
+                        <li>This is a list element (li)</li>
+                        <li>This is a list element (li)</li>
+                        <li>This is a list element (li)</li>
+                    </ul>
+                </div>
+
+                <div style="background-color:rgb(40,40,40) !important; text-align: left !important; display:block; margin:1em -5px; border-radius:0.5em; justify-content:center; padding:1em;">
+                    <p style="text-align: left !important; display:block;">
+                        This is an ordered list (ol)
+                    </p>
+                    <ol style="list-style:decimal; margin-left:1em; padding:0;">
+                        <li>This is a list element (li)</li>
+                        <li>This is a list element (li)</li>
+                        <li>This is a list element (li)</li>
+                    </ol>
+                </div>
+            </div>
+
+
+
+            <div class="content3" style="width:100% !important; margin:auto;">
+                <style>
+                    table{
+                        
+                    }
+                </style>
+                <h2>Tables</h2>
+                <p style="background-color:rgb(40,40,40) !important; text-align: center; display:flex; margin:1em -5px; border-radius:0.5em; justify-content:center; padding:1em;">
+                    Tables
+                </p>
+                <div style="background-color:rgb(40,40,40) !important; text-align: left !important; display:block; margin:1em -5px; border-radius:0.5em; justify-content:center; padding:1em;">
+                    <style>
+input[type="checkbox"] {
+  display: none;
+}
+.wrap-collabsible {
+  margin: 1.2rem 0;
+}
+.lbl-toggle {
+  display: block;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1rem;
+  color: rgba(221, 221, 221, 0.75);
+  background: #001f4a;
+  cursor: pointer;
+  border-radius: 7px;
+  transition: all 0.25s ease-out;
+}
+.lbl-toggle:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+.lbl-toggle::before {
+  content: " ";
+  display: inline-block;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+  vertical-align: middle;
+  margin-right: 0.7rem;
+  transform: translateY(-2px);
+  transition: transform 0.2s ease-out;
+}
+.toggle:checked + .lbl-toggle::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+.collapsible-content {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.25s ease-in-out;
+}
+.toggle:checked + .lbl-toggle + .collapsible-content {
+  max-height: 350px;
+}
+.toggle:checked + .lbl-toggle {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.collapsible-content .content-inner {
+  background: rgba(0, 106, 255, 0.118);
+  border-bottom: 1px solid rgba(0, 106, 255, 0.171);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding: 0.5rem 1rem;
+}
+.collapsible-content p {
+  margin-bottom: 0;
+}
+
+                    </style>
+                    <div class="wrap-collabsible"> <input id="collapsible2" class="toggle" type="checkbox" checked=""> <label for="collapsible2" class="lbl-toggle">Click Me!</label>
+                        <div class="collapsible-content">
+                          <div class="content-inner">
+                            <p> 
+                                Bacon ipsum dolor amet pork belly capicola ground round brisket. Shank pork belly cupim fatback. Flank porchetta chicken spare ribs. Ham prosciutto pork belly turkey beef picanha strip steak swine alcatra.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+
+                <div style="background-color:rgb(40,40,40) !important; text-align: left !important; display:block; margin:1em -5px; border-radius:0.5em; justify-content:center; padding:1em;">
+                    <table>
+                        <tr>
+                          <th>Company</th>
+                          <th>Contact</th>
+                          <th>Country</th>
+                        </tr>
+                        <tr>
+                          <td>Alfreds Futterkiste</td>
+                          <td>Maria Anders</td>
+                          <td>Germany</td>
+                        </tr>
+                        <tr>
+                          <td>Centro comercial Moctezuma</td>
+                          <td>Francisco Chang</td>
+                          <td>Mexico</td>
+                        </tr>
+                      </table>
+                </div>
             </div>
             
 
