@@ -339,7 +339,82 @@ a {
                 </div>
             </div>
 
-            <div class="content4">
+            <div style="display:flex; margin:0 -5px;">
+                <style>
+                    input{
+                        background-color:rgb(100,100,100);
+                        color:rgb(255,255,255);
+                        padding:1em;
+                        border:5px solid rgb(30,30,30);
+                        border-radius:1em;
+
+                        transition:0.5s ease-in-out;
+                    }
+                    input:hover{
+                        transform:scale(101%);
+                    }
+                </style>
+                <div class="content3" style="width:100% !important; margin-top:1em; justify-content: center !important; border-color:rgb(40,40,60) !important; background-color:rgb(30,30,50) !important;">
+                    <h2 style="text-align:center;">Subscribe to My Newsletter!</h2>
+                    <div class="content3" style="padding:1em; margin-bottom:1em; background-color:rgb(40,40,40) !important; border-color:rgb(50,50,50); justify-content:center !important; margin-left:auto; margin-right:auto;">
+                        
+                        <input type="text" placeholder="Email Address" id="email" style="width:50%;">
+
+                        <script>
+                            //https://stackoverflow.com/a/46181
+                            const validateEmail = (email) => {
+                                return String(email)
+                                    .toLowerCase()
+                                    .match(
+                                    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+                                    );
+                            };
+                            function buttonSubmit(){
+                                //let reg=RegExp("^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$");
+
+                                let matches=validateEmail(document.getElementById("email").value)
+
+                                if (matches!=null){
+                                    document.getElementById("email").value='';
+                                    document.getElementById("email-text").innerHTML="Thanks! You will be recieving a confirmation email shortly.";
+                                    setTimeout(()=>{let p=document.getElementById("email-text");p.style.color="";p.innerHTML=""},3000)
+                                }
+                                else{
+                                    document.getElementById("email").value='';
+                                    document.getElementById("email-text").style.color="red"
+                                    document.getElementById("email-text").innerHTML="Invalid Email"
+                                    setTimeout(()=>{let p=document.getElementById("email-text");p.style.color="";p.innerHTML=""},3000)
+                                }
+                            }
+                        </script>
+                        <style>
+                            #submitbutton{
+                                margin-left:1em;
+                                border:3px solid rgb(30,30,30);
+
+                                background-color:rgb(100,100,100);
+                                color:rgb(200,200,200);
+
+                                border-radius:0.5em;
+                                padding:0.5em;
+
+                                cursor:pointer;
+
+                                transition:0.25s ease-out;
+                            }
+                            #submitbutton:hover{
+                                transform:scale(110%);
+                                opacity: 75%;
+                            }
+                        </style>
+                        <button onclick="buttonSubmit()" id="submitbutton">Submit</button>
+
+                        <p id="email-text"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content4" style="background-color:rgb(30,30,30) !important; border-color:rgb(40,40,40) !important;">
                 <style>
                     iframe{
                         border:5px solid rgb(40,40,40);
