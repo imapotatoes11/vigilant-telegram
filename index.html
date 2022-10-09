@@ -3,244 +3,21 @@
     <head>
         <title>Kevin's Homepage</title>
         <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="animate_on_appear.js"></script>
+        <link rel="stylesheet" href="nav.css">
+        <link rel="stylesheet" href="content.css">
+
         <style>
-            html{
+            /*html{
                 font-family:Arial, Helvetica, sans-serif;
                 background-color:black;
                 background:linear-gradient(45deg,rgb(17.5,0,0),rgb(0,0,17.5));
                 background-size:400% 400%;
                 color:white;
                 animation: gradient 100s ease-in-out infinite; /*Make a subtle color change thing in background*/
-            }
-
-
-/*https://codepen.io/samnorton/pen/zBYMJG*/
-
-* {
-	box-sizing: border-box;
-}
-body {
-	font-family: 'Montserrat', sans-serif;
-	line-height: 1.6;
-	margin: 0;
-	min-height: 100vh;
-}
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-
-h2.header,
-h3.header,
-a {
-	color: #9dc5f0;
-}
-
-a {
-	text-decoration: none;
-}
-
-
-
-.logo {
-	margin: 0;
-	font-size: 1.45em;
-}
-
-.main-nav {
-	margin-top: 5px;
-
-}
-.logo a,
-.main-nav a {
-	padding: 10px 15px;
-	text-transform: uppercase;
-	text-align: center;
-	display: block;
-}
-
-.main-nav a {
-	color: #9dc5f0;
-	font-size: .99em;
-    transition:0.25s ease-out;
-}
-
-.main-nav a:hover {
-	color: #7d9ec1;
-    transform:scale(110%);
-    transform:translateY(2.5px);
-}
-
-
-
-.header {
-	padding-top: .5em;
-	padding-bottom: .5em;
-	border: 1px solid #212121;
-	background-color: rgb(30,30,50);/*#4b4b4b;*/
-	-webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
-	box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 0px;
-}
-
-
-/* ================================= 
-  Media Queries
-==================================== */
-
-
-
-
-@media (min-width: 769px) {
-	.header,
-	.main-nav {
-		display: flex;
-	}
-	.header {
-		flex-direction: column;
-		align-items: center;
-		/*width: 80%;*/
-		margin: 0 auto;
-		max-width: 100%;/*1250px;/*1150px;*/
-	
-	}
-
-}
-
-@media (min-width: 1025px) {
-	.header {
-		flex-direction: row;
-		justify-content: space-between;
-	}
-
-}
-
-
-
-/**********************   aight my code from now on*/
-.content{
-    color:rgba(200, 200, 200, 0.75) !important;
-    padding-left:1em;
-    padding-right:1em;
-}
-
-.content1{
-    text-align:center;
-    padding-top:2em;
-    padding-bottom:2em;
-    
-    /*background:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://i.pinimg.com/originals/05/fc/64/05fc64de027859a9fb90bc9b270810a9.jpg);
-    background-size:1250px;*/
-    background-repeat:no-repeat;
-    background-color:rgba(0,0,0,0.75) !important;
-    
-    color:rgba(255, 255, 255, 0.8);
-    font-size:40px;
-
-
-    background: /*url(https://wallpapercave.com/wp/wp9553605.png);*/linear-gradient(-45deg, #ee76527e, #e73c7e79, #23a5d577, #23d5ab75);
-    /*background:url(https://images.hdqwalls.com/wallpapers/desktop-abstract-2020-4k-mm.jpg);*/
-    background-size: 400% 400%;
-    animation: gradient 30s ease-in-out infinite;
-
-
-    border-radius:0.25em;
-    
-}
-
-
-.content3{
-    background:rgb(30,30,30);
-
-    padding-left:1em;
-    padding-right:1em;
-
-    width:50%;
-    margin:0 5px;
-    
-    border-radius:1em;
-    border:5px solid rgb(40,40,40);
-}
-.content3_button{
-    background:rgb(60,60,100);
-
-    padding:0.5em;
-    color:rgba(255,255,255,0.75);
-
-    border-radius:0.25em;
-    border:1px solid black;
-
-    margin:0.5em;
-    
-    transition:0.1s ease-out;
-}
-.content3_button:hover{
-    transform:scale(105%);
-}
-
-.content3_button:after{
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);/*0*/
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #0087ca;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-}
-
-.content3_button:hover:after{
-    transform:scale(1);
-    transform-origin: bottom left;
-}
-
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-        color:rgba(255,255,255,0.7);
-    }
-    50% {
-        background-position: 100% 50%;
-        color:rgba(255,255,255,0.99)
-    }
-    100% {
-        background-position: 0% 50%;
-        color:rgba(255,255,255,0.7)
-    }
-}
-
-
-.content4{
-    background:rgb(30,30,50);
-
-    padding-left:1em;
-    padding-right:1em;
-
-    margin-top:1em;
-    
-    border-radius:1em;
-    border:5px solid rgb(40,40,60);
-}
-
-
-
-
-
-.footer{
-    background-color:rgba(0,0,0,0);
-    margin-top:25px;
-    padding:1em;
-    text-align:center;
-}
+            /*}*/
 
 
 
@@ -364,7 +141,6 @@ a {
                         <input type="text" placeholder="Email Address" id="email" style="width:50%;">
 
                         <script>
-                            //https://stackoverflow.com/a/46181
                             const validateEmail = (email) => {
                                 return String(email)
                                     .toLowerCase()

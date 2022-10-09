@@ -1,0 +1,116 @@
+html{
+    font-family:Arial, Helvetica, sans-serif;
+    background-color:black;
+    background:linear-gradient(45deg,rgb(17.5,0,0),rgb(0,0,17.5));
+    background-size:400% 400%;
+    color:white;
+    animation: gradient 100s ease-in-out infinite; /*Make a subtle color change thing in background*/
+}
+
+
+
+/*https://codepen.io/samnorton/pen/zBYMJG*/
+
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Montserrat', sans-serif;
+	line-height: 1.6;
+	margin: 0;
+	min-height: 100vh;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+h2.header,
+h3.header,
+a {
+	color: #9dc5f0;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+
+.logo {
+	margin: 0;
+	font-size: 1.45em;
+}
+
+.main-nav {
+	margin-top: 5px;
+
+}
+.logo a,
+.main-nav a {
+	padding: 10px 15px;
+	text-transform: uppercase;
+	text-align: center;
+	display: block;
+}
+
+.main-nav a {
+	color: #9dc5f0;
+	font-size: .99em;
+    transition:0.25s ease-out;
+}
+
+.main-nav a:hover {
+	color: #7d9ec1;
+    transform:scale(110%);
+    transform:translateY(2.5px);
+}
+
+
+
+.header {
+	padding-top: .5em;
+	padding-bottom: .5em;
+	border: 1px solid #212121;
+	background-color: rgb(30,30,50);/*#4b4b4b;*/
+	-webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 0px;
+}
+
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+
+
+
+@media (min-width: 769px) {
+	.header,
+	.main-nav {
+		display: flex;
+	}
+	.header {
+		flex-direction: column;
+		align-items: center;
+		/*width: 80%;*/
+		margin: 0 auto;
+		max-width: 100%;/*1250px;/*1150px;*/
+	
+	}
+
+}
+
+@media (min-width: 1025px) {
+	.header {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+}
