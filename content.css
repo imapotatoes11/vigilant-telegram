@@ -46,8 +46,8 @@
 
 
     transition: 0.25s ease-out;
-    transform:scale(75%);
-    opacity:75%;
+    transform:scale(90%);
+    opacity:85%;
 }
 .content3_visible{
     transform:none;
