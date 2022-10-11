@@ -1,5 +1,7 @@
 //https://codepen.io/zvona/pen/RwyyNK
 
+window.scrollBy(0,-10000);
+
 var onAppear = [];
 
 document.addEventListener("DOMContentLoaded", function() {
