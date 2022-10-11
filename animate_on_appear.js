@@ -1,6 +1,10 @@
 //https://codepen.io/zvona/pen/RwyyNK
 
-window.scrollBy(0,-10000);
+for (var i = 0; i < 10; i++) {
+  //ITS NOT SCROLLING TO TOP AHHHHHHHHHHHHH
+  //sounds like a skill issue ngl
+  window.scrollTo(0, 0);
+}
 
 var onAppear = [];
 
