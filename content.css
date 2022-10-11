@@ -8,6 +8,24 @@ html{
     padding-right:1em;
 }
 
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+        color:rgba(255,255,255,0.7);
+    }
+    50%{
+        color: rgba(255,255,255,0.99)
+    }
+    100%/*50%*/ {
+        background-position: 100% 50%;
+        color:rgba(255,255,255,0.7)
+    }
+    /*100% {
+        background-position: 0% 50%;
+        color:rgba(255,255,255,0.7)
+    }*/
+}
+
 .content1{
     text-align:center;
     padding-top:40vh;/*2em;*/
@@ -22,9 +40,9 @@ html{
     font-size:40px;
 
 
-    background: /*url(https://wallpapercave.com/wp/wp9553605.png);*/linear-gradient(-45deg, #ee76527e, #e73c7e79, #23a5d577, #23d5ab75);
+    background: /*url(https://wallpapercave.com/wp/wp9553605.png);*/linear-gradient(-90deg, #ee76527e, #e73c7e79, #23a5d577, #23d5ab75, #23a5d577, #e73c7e79, #ee76527e);
     /*background:url(https://images.hdqwalls.com/wallpapers/desktop-abstract-2020-4k-mm.jpg);*/
-    background-size: 400% 400%;
+    background-size: 4000% 10000%;
     animation: gradient 30s ease-in-out infinite;
 
 
@@ -124,20 +142,7 @@ html{
 }
 
 
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-        color:rgba(255,255,255,0.7);
-    }
-    50% {
-        background-position: 100% 50%;
-        color:rgba(255,255,255,0.99)
-    }
-    100% {
-        background-position: 0% 50%;
-        color:rgba(255,255,255,0.7)
-    }
-}
+
 
 
 .content4{
