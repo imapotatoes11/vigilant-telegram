@@ -25,6 +25,22 @@ window.addEventListener("scroll", function() {
 
 
 
+
+/*window.addEventListener("onload", function() {
+  onAppear.forEach(function(elem) {
+    var vwTop = window.pageYOffset;
+    var vwBottom = (window.pageYOffset + window.innerHeight);
+    var elemTop = elem.offsetTop;
+    var elemHeight = elem.offsetHeight;
+    
+    if (vwBottom > elemTop && ((vwTop - elemHeight) < elemTop)) {
+     elem.classList.add("content3_visible");
+    } else {
+      elem.classList.remove("content3_visible");
+    }
+  });
+}, false);*/
+
 //repeat for content4
 //nvm it breaks everything
 /*
