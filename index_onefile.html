@@ -1,0 +1,613 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Kevin's Homepage</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript">
+            //https://codepen.io/zvona/pen/RwyyNK
+
+for (var i = 0; i < 10; i++) {
+  //ITS NOT SCROLLING TO TOP AHHHHHHHHHHHHH
+  //sounds like a skill issue ngl
+  window.scrollTo(0, 0);
+}
+
+var onAppear = [];
+
+document.addEventListener("DOMContentLoaded", function() {
+  onAppear = [].map.call(document.querySelectorAll(".content3"), function(item ) {
+    return item;
+  });
+}, false);
+
+window.addEventListener("scroll", function() {
+  onAppear.forEach(function(elem) {
+    var vwTop = window.pageYOffset;
+    var vwBottom = (window.pageYOffset + window.innerHeight);
+    var elemTop = elem.offsetTop;
+    var elemHeight = elem.offsetHeight;
+    
+    if (vwBottom > elemTop && ((vwTop - elemHeight) < elemTop)) {
+     elem.classList.add("content3_visible");
+    } else {
+      elem.classList.remove("content3_visible");
+    }
+  });
+}, false);
+
+
+
+
+/*window.addEventListener("onload", function() {
+  onAppear.forEach(function(elem) {
+    var vwTop = window.pageYOffset;
+    var vwBottom = (window.pageYOffset + window.innerHeight);
+    var elemTop = elem.offsetTop;
+    var elemHeight = elem.offsetHeight;
+    
+    if (vwBottom > elemTop && ((vwTop - elemHeight) < elemTop)) {
+     elem.classList.add("content3_visible");
+    } else {
+      elem.classList.remove("content3_visible");
+    }
+  });
+}, false);*/
+
+//repeat for content4
+//nvm it breaks everything
+/*
+var c_onAppear=[];
+document.addEventListener("DOMContentLoaded", function() {
+    onAppear=[].map.call(document.querySelectorAll(".content4"),function(item ){
+        return item;
+    });
+}, false);
+
+window.addEventListener("scroll", function() {
+    onAppear.forEach(function(elem) {
+      var vwTop = window.pageYOffset;
+      var vwBottom = (window.pageYOffset + window.innerHeight);
+      var elemTop = elem.offsetTop;
+      var elemHeight = elem.offsetHeight;
+      
+      if (vwBottom > elemTop && ((vwTop - elemHeight) < elemTop)) {
+       elem.classList.add("content4_visible");
+      } else {
+        elem.classList.remove("content4_visible");
+      }
+    });
+  }, false);*/
+        </script>
+        <style>
+            html{
+    font-family:Arial, Helvetica, sans-serif;
+    background-color:black;
+    background:linear-gradient(45deg,rgb(17.5,0,0),rgb(0,0,17.5));
+    background-size:400% 400%;
+    color:white;
+    animation: gradient 100s ease-in-out infinite; /*Make a subtle color change thing in background*/
+}
+
+
+
+/*https://codepen.io/samnorton/pen/zBYMJG*/
+
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Montserrat', sans-serif;
+	line-height: 1.6;
+	margin: 0;
+	min-height: 100vh;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+h2.header,
+h3.header,
+a {
+	color: #9dc5f0;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+
+.logo {
+	margin: 0;
+	font-size: 1.45em;
+}
+
+.main-nav {
+	margin-top: 5px;
+
+}
+.logo a,
+.main-nav a {
+	padding: 10px 15px;
+	text-transform: uppercase;
+	text-align: center;
+	display: block;
+}
+
+.main-nav a {
+	color: #9dc5f0;
+	font-size: .99em;
+    transition:0.25s ease-out;
+}
+
+.main-nav a:hover {
+	color: #7d9ec1;
+    transform:scale(110%);
+    transform:translateY(2.5px);
+}
+
+
+
+.header {
+	padding-top: .5em;
+	padding-bottom: .5em;
+	border: 1px solid #212121;
+	background-color: rgb(30,30,50);/*#4b4b4b;*/
+	-webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 0px;
+}
+
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+
+
+
+@media (min-width: 769px) {
+	.header,
+	.main-nav {
+		display: flex;
+	}
+	.header {
+		flex-direction: column;
+		align-items: center;
+		/*width: 80%;*/
+		margin: 0 auto;
+		max-width: 100%;/*1250px;/*1150px;*/
+	
+	}
+
+}
+
+@media (min-width: 1025px) {
+	.header {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+}
+
+        </style>
+        <style>
+            html{
+    scroll-behavior: smooth !important;
+}
+
+.content{
+    color:rgba(200, 200, 200, 0.75) !important;
+    padding-left:1em;
+    padding-right:1em;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+        color:rgba(255,255,255,0.7);
+    }
+    50%{
+        color: rgba(255,255,255,0.99)
+    }
+    100%/*50%*/ {
+        background-position: 100% 50%;
+        color:rgba(255,255,255,0.7)
+    }
+    /*100% {
+        background-position: 0% 50%;
+        color:rgba(255,255,255,0.7)
+    }*/
+}
+
+.content1{
+    text-align:center;
+    padding-top:40vh;/*2em;*/
+    padding-bottom:40vh;/*2em;*/
+    
+    /*background:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://i.pinimg.com/originals/05/fc/64/05fc64de027859a9fb90bc9b270810a9.jpg);
+    background-size:1250px;*/
+    background-repeat:no-repeat;
+    background-color:rgba(0,0,0,0.75) !important;
+    
+    color:rgba(255, 255, 255, 0.8);
+    font-size:40px;
+
+
+    background: /*url(https://wallpapercave.com/wp/wp9553605.png);*/linear-gradient(-90deg, #ee76527e, #e73c7e79, #23a5d577, #23d5ab75, #23a5d577, #e73c7e79, #ee76527e);
+    /*background:url(https://images.hdqwalls.com/wallpapers/desktop-abstract-2020-4k-mm.jpg);*/
+    background-size: 4000% 10000%;
+    animation: gradient 30s ease-in-out infinite;
+
+
+    border-radius:0.25em;
+    
+}
+
+
+.content1 img{
+    width:2.5em;
+    transform:translateY(20vh) scaleY(75%);
+
+    transition:all 0.1s ease-out;
+
+    cursor:pointer;
+}
+
+.content1 img:hover{
+    transform : scaleZ(110%) translateY(20vh);/*translateY(20vh) scaleX(110%);/*scaleY(60%) scale(105%);*/
+    opacity:50%;
+}
+
+
+
+
+
+.content3{
+    background:rgb(30,30,30);
+
+    padding-left:1em;
+    padding-right:1em;
+
+    width:50%;
+    margin:0 5px;
+    
+    border-radius:1em;
+    border:5px solid rgb(40,40,40);
+
+
+    transition: 0.25s ease-out;
+    transform:scale(90%);
+    opacity:85%;
+}
+.content3_visible{
+    transform:none;
+    opacity:100%;
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform:translateX(20vh);
+    }
+    to {
+        opacity: 1;
+        transform:none;
+    }
+}
+
+
+
+
+.content3_button{
+    background:rgb(60,60,100);
+
+    padding:0.5em;
+    color:rgba(255,255,255,0.75);
+
+    border-radius:0.25em;
+    border:1px solid black;
+
+    margin:0.5em;
+    
+    transition:0.1s ease-out;
+}
+.content3_button:hover{
+    transform:scale(105%);
+}
+
+.content3_button:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);/*0*/
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.content3_button:hover:after{
+    transform:scale(1);
+    transform-origin: bottom left;
+}
+
+
+
+
+
+.content4{
+    background:rgb(30,30,50);
+
+    padding-left:1em;
+    padding-right:1em;
+
+    margin-top:1em;
+    
+    border-radius:1em;
+    border:5px solid rgb(40,40,60);
+}/*
+    transition: 500ms ease-out;
+    transform:translateX(-25em);
+    opacity:0%;
+}
+.content4_visible{
+    transform:none;
+    opacity:100%;
+}*/
+
+
+
+
+
+.footer{
+    background-color:rgba(0,0,0,0);
+    margin-top:25px;
+    padding:1em;
+    text-align:center;
+}
+        </style>
+
+        <style>
+            /*html{
+                font-family:Arial, Helvetica, sans-serif;
+                background-color:black;
+                background:linear-gradient(45deg,rgb(17.5,0,0),rgb(0,0,17.5));
+                background-size:400% 400%;
+                color:white;
+                animation: gradient 100s ease-in-out infinite; /*Make a subtle color change thing in background*/
+            /*}*/
+
+
+
+
+
+
+
+@keyframes rotate {
+	100% {
+		transform: rotate(1turn);
+	}
+}
+
+.rainbow { /*https://codepen.io/Chester/pen/QPoyjN*/
+	position: relative;
+	z-index: 0;
+	/*width: 400px;
+	height: 300px;*/
+	border-radius: 10px;
+	overflow: hidden;
+	padding: 2rem;
+}
+	.rainbow::before {
+		content: '';
+		position: absolute;
+		z-index: -2;
+		left: -50%;
+		top: -50%;
+		width: 200%;
+		height: 200%;
+		background-color: #399953;
+		background-repeat: no-repeat;
+		background-size: 50% 50%, 50% 50%;
+		background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+		background-image: linear-gradient(#399953, #399953), linear-gradient(#fbb300, #fbb300), linear-gradient(#d53e33, #d53e33), linear-gradient(#377af5, #377af5);
+		animation: rotate 4s linear infinite;
+	}
+	
+	.rainbow::after {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		left: 6px;
+		top: 6px;
+		width: calc(100% - 12px);
+		height: calc(100% - 12px);
+		background: rgb(0, 0, 0);
+		border-radius: 5px;
+	}
+
+        </style>
+
+        
+        
+
+    </head>
+    <body>
+        <header class="header">
+            <h1 class="logo"><a href="#" style="display:flex; text-align:center; margin:0 -5px;"><img src="https://avatars.githubusercontent.com/u/79340132?v=4" height="45em" style="border:1px solid black; border-radius:1em;"><h1 style="margin:0 5px; font-size:20px; text-align:center; transform:translateY(0.5em);">Kevin</h1></a></h1>
+          <ul class="main-nav">
+              <li><a href="https://imapotatoes11.github.io/vigilant-telegram/activities/index.html">Projects</a></li>
+              <li><a href="https://imapotatoes11.github.io/vigilant-telegram/demo.html">HTML Demo</a></li>
+              <li><a href="https://imapotatoes11.github.io/vigilant-telegram/about.html">About</a></li>
+              <!--<li><a href="#">test</a></li>-->
+          </ul>
+        </header> 
+
+        <div class="content">
+            <!--add your stuff here-->
+            <h2 class="content1" style="
+            background-color: linear-gradient(to-right, #1565C0, #b92b27) !important;
+            ">Welcome to my Website!<br><img src="down-arrow-svgrepo-com.svg" onclick="window.scrollBy(0,window.innerHeight+130)"></h2>
+            
+            <div style="display:flex; margin:0 -5px;">
+                <div class="content3">
+                    <p id="typeout1">Hello! I am Kevin. I like to program things in my spare time. I am currently taking a computer science course to learn more about computer science!</p>
+                    <a href="https://imapotatoes11.github.io/acpo/docs/x.html">
+                        <div class="content3_button" style="text-align:center; width:7.5em; font-size:12.5px; color:rgba(255,255,255,0.75); margin:auto; margin-bottom:1em; margin-top:1em;">
+                            Click Me!
+                        </div>
+                    </a>
+                </div>
+                <div class="content3">
+                    <p>I have a GitHub account! You can follow me and view my projects <a href="https://github.com/imapotatoes11">here</a><a href="https://rickrollredirect.github.io">:</a></p>
+                    <!--
+                    used for github cards: https://lab.lepture.com/github-cards 
+                    IMPORTANT: Must put script tag next to the div for it to work
+                    -->
+                    <!--<div class="github-card" data-github="imapotatoes11" data-width="400" data-height="150" data-theme="default"></div>
+                    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>-->
+                    <div class="github" style="max-width:10em;">
+                        <github-card data-user="imapotatoes11" data-theme="dark"></github-card>
+                    </div>
+                    <script type="module" src="https://unpkg.com/@rocktimsaikia/github-card@latest?module"></script>
+                </div>
+                <div class="content3">
+                    <!--<p id="typeout">Vel commodi perspiciatis hic voluptatem ducimus sit magnam illum non blanditiis temporibus est ratione voluptas 33 doloribus nulla!</p>
+                    <script src="/script.js"></script>-->
+                    <h4>Future Projects:</h4>
+                    <ol>
+                        <li>Expansion of this website (more pages, more content...)</li>
+                        <li>Adding links to more projects to this website</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div style="display:flex; margin:0 -5px;">
+                <style>
+                    input{
+                        background-color:rgb(100,100,100);
+                        color:rgb(255,255,255);
+                        padding:1em;
+                        border:5px solid rgb(30,30,30);
+                        border-radius:1em;
+
+                        transition:0.5s ease-in-out;
+                    }
+                    input:hover{
+                        transform:scale(101%);
+                    }
+                </style>
+                <div class="content3" style="width:100% !important; margin-top:1em; justify-content: center !important; border-color:rgb(40,40,60) !important; background-color:rgb(30,30,50) !important;">
+                    <h2 style="text-align:center;">Subscribe to My Newsletter!</h2>
+                    <div class="content3" style="padding:1em; margin-bottom:1em; background-color:rgb(40,40,40) !important; border-color:rgb(50,50,50); justify-content:center !important; margin-left:auto; margin-right:auto;">
+                        
+                        <input type="text" placeholder="Email Address" id="email" style="width:50%;">
+
+                        <script>
+                            const validateEmail = (email) => {
+                                return String(email)
+                                    .toLowerCase()
+                                    .match(
+                                    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+                                    );
+                            };
+                            function buttonSubmit(){
+                                //let reg=RegExp("^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$");
+
+                                let matches=validateEmail(document.getElementById("email").value)
+
+                                if (matches!=null){
+                                    document.getElementById("email").value='';
+                                    document.getElementById("email-text").innerHTML="Thanks! You will be recieving a confirmation email shortly.";
+                                    setTimeout(()=>{let p=document.getElementById("email-text");p.style.color="";p.innerHTML=""},3000)
+                                }
+                                else{
+                                    document.getElementById("email").value='';
+                                    document.getElementById("email-text").style.color="red"
+                                    document.getElementById("email-text").innerHTML="Invalid Email"
+                                    setTimeout(()=>{let p=document.getElementById("email-text");p.style.color="";p.innerHTML=""},3000)
+                                }
+                            }
+                        </script>
+                        <style>
+                            #submitbutton{
+                                margin-left:1em;
+                                border:3px solid rgb(30,30,30);
+
+                                background-color:rgb(100,100,100);
+                                color:rgb(200,200,200);
+
+                                border-radius:0.5em;
+                                padding:0.5em;
+
+                                cursor:pointer;
+
+                                transition:0.25s ease-out;
+                            }
+                            #submitbutton:hover{
+                                transform:scale(110%);
+                                opacity: 75%;
+                            }
+                        </style>
+                        <button onclick="buttonSubmit()" id="submitbutton">Submit</button>
+
+                        <p id="email-text"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content4" style="background-color:rgb(30,30,30) !important; border-color:rgb(40,40,40) !important;">
+                <style>
+                    iframe{
+                        border:5px solid rgb(40,40,40);
+                        border-radius:0.5em;
+                    }
+                </style>
+                <h2 style="text-align:center;">Projects</h2>
+                <iframe src="https://imapotatoes11.github.io/vigilant-telegram/activities" width="90%" height="750px" style="display:block; margin:1em auto;"></iframe>
+                <!--<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" width="90%" height="750px" style="display:block; margin:1em auto;"></iframe>-->
+            </div>
+
+
+
+
+        </div>
+
+        <div class="footer">
+            <h4>This Webpage was made by <a href="https://github.com/imapotatoes11">Kevin</a></h4>
+            <style>
+            .flex_a{
+                margin:0 5px;
+                text-align:center;
+                border:none;
+                background:none;
+                color: #9dc5f0;
+                font-size:16px;
+            }
+            .flex{
+                justify-content: center;
+            }
+            </style>
+            <div style="display:flex; margin:0 -5px;" class="flex">
+                <script type="text/javascript" src="/script.js">window.scrollTop=scrollTop</script>
+                <a href="#" class="flex_a">Home</a>
+                <a href="#" class="flex_a">About</a>
+                <a href="mailto:imapotatoes11@gmail.com" class="flex_a">Contact</a>
+                <button onclick="window.scrollTop()" class="flex_a">Back to Top</button>
+            </div>
+        </div>
+    
+    </body>
+</html>
