@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>KW-H: mmm yes gradients</title>
+        <link href='https://fonts.googleapis.com/css?family=Open Sans Extrabold' rel='stylesheet'>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+
+            .d1{
+                border:2.5px solid transparent;
+                /*width:fit-content;*/
+                justify-content: center;
+                text-align:center;
+                padding-left:2em;padding-right:2em;
+                margin:2.5em;
+                border-radius:2em;
+            }
+            .g1{
+                --bg-size:400%;
+                font-family:'Open Sans',sans-serif;
+                font-weight:800;
+                font-size:100px;
+                margin:2em;
+                
+                background: -webkit-linear-gradient(19deg, #21D4FD , #B721FF, #21D4FD) 0 0 / var(--bg-size) 100%;
+                /*-webkit-background-clip: text;
+                background-clip:text;
+                -webkit-text-fill-color: transparent;*/
+                color:transparent;
+                -webkit-background-clip:text;
+                background-clip:text;
+                
+                /*background-color: #21D4FD;*/
+                
+                animation: g1a 60s ease infinite;
+                
+            }
+            @keyframes g1a{
+                to{
+                    background-position:var(--bg-size) 0;
+                }
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="d1">
+            <h1 class="g1">Mmm yes</h1>
+        </div>
+    </body>
+</html>
